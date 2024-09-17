@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let somaPar = 0
+        let somaImpar = 0
+        while (true){
+            var numero = Number(prompt('Digiite um numero(depois de 1000 parra parar o programa)'))
+            if(numero > 1000){
+               break; 
+            }
+            if (numero%2 == 0){
+                somaPar += numero
+            }
+            else{
+                
+                somaImpar += numero
+            }
+        
+        }
+        alert('A soma dos numeros pares foi '+somaPar+'\nSoma dos numeros impares: '+somaImpar)
+        </script>
+</body>
+</html>

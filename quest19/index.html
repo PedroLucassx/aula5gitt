@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    while (true) {
+        var m = Number(prompt("Insira um valor inteiro positivo (ou um valor negativo para sair):"));
+        if (m < 0) break;
+        
+        if (m % 2 === 0) {
+            var divisores = 0;
+            for (var i = 1; i <= m; i++) {
+                if (m % i === 0) divisores++;
+            }
+            alert("O número " + m + " possui " + divisores + " divisores.");
+        } else {
+            if (m < 10) {
+                var fatorial = 1;
+                for (var i = m; i > 1; i--) {
+                    fatorial *= i;
+                }
+                alert("Fatorial de " + m + " é " + fatorial);
+            } else {
+                var soma = 0;
+                for (var i = 1; i <= m; i++) {
+                    soma += i;
+                }
+                alert("A soma dos inteiros de 1 até " + m + " é " + soma);
+            }
+        }
+    }
+</script>
+</body>
+</html>

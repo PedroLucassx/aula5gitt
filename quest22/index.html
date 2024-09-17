@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var maiorIdade = -Infinity;
+        var qtdIndivid = ''
+        while(true){
+        var sexo = (prompt('DIGITE O SEXO(MASCULINO(m)\nFEMININO(f))')) 
+        var corOlhos = (prompt('QUAL A COR DOS OLHOS?(AZUL(a), VERDE(v) OU CASTANHO PRETO(c))'))  
+        var corCabelos = (prompt('QUAL A COR DO CABELO?(LOIROS(l)\nCASTANHOS(c)\nPRETO(p))'))
+        var idade = Number(prompt('DIGITE A IDADE(DIGITE -1 PARA PARAR O PROGRAMA)'))
+        if(idade < 0){
+            break;
+        }
+        if((idade >= 18 && idade <= 35) && (corOlhos === 'v')&&(corCabelos === 'l')&& (sexo === 'f')){ 
+        qtdIndivid++
+        }
+        if(maiorIdade < idade){
+            maiorIdade = idade
+        }
+    }
+    alert(`A MAIOR IDADE DENTRE OS HABITANTES É: ${maiorIdade}\nA QUANTIDADE DE INDIVIDUOS DO SEXO FEMININO CUJA IDADE ESTÁ ENTRE 18 E 35 ANOS E QUE TENHAM OLHOS VERDES E CABELOS LOIROS: ${qtdIndivid}`)
+        </script>
+</body>
+</html>

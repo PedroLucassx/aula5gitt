@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mediaMaior = -Infinity
+        var mediaMenor = Infinity
+        var mediaTurma = 0
+        var soma = 0
+        var contador = 0
+    
+        while (true){
+            var mediaAlunos = Number(prompt('Digite a media do aluno(o programa para quando voce colocar uma media negativa'))
+            if(mediaAlunos < 0){
+               break; 
+            }
+            else
+            {
+        contador++ 
+        
+        if(mediaAlunos > mediaMaior){
+            mediaMaior = mediaAlunos
+        }
+        if(mediaAlunos < mediaMenor){
+            mediaMenor = mediaAlunos
+        }
+        soma += mediaAlunos;
+        mediaTurma = soma / contador;
+            }
+        }
+        alert('A maior media da sala foi de '+mediaMaior+'\nA menor media foi de: '+mediaMenor+'\nE a media da turma foi: '+mediaTurma.toFixed(2))
+        </script>
+</body>
+</html>

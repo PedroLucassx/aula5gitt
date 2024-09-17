@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var soma = 0
+        var qtd = 0
+        var media = ''
+        var somaPar = ''
+        var maiorNum = -Infinity
+        var menorNum = Infinity
+        var contPar = 0
+        var MediaPar= ''
+        var contImpar = 0
+        var impar100 = ''
+        var percentImpar = ''
+        while(true){
+        var num = Number(prompt('DIGITE UM NUMERO(DIGITE 99999 PARA PARAR O PROGRAMA)'))
+        if(num == 99999){
+            break;
+        }
+        soma += num
+        qtd++
+        if(maiorNum < num){
+            maiorNum = num
+        }
+        if(menorNum > num){
+            menorNum = num
+        }
+        if(num%2 == 0){
+            contPar++
+            somaPar = num
+        }
+        if(num%2 == 1){
+            contImpar++
+            impar100 = contImpar * 100
+        }
+    }
+    media = soma / qtd
+    MediaPar = somaPar / contPar
+    percentImpar = impar100 / qtd
+    alert(`a) a soma dos números digitados: ${soma} \n
+    b) a quantidade de números digitados: ${qtd} \n
+    c) a média dos números digitados: ${media} \n
+    d) o maior número digitado: ${maiorNum} \n
+    e) o menor número digitado: ${menorNum} \n
+    f) a média dos números pares: ${MediaPar} \n
+    g) a percentagem dos números ímpares entre todos os números digitados: ${percentImpar}`)
+        </script>
+</body>
+</html>

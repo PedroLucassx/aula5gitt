@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var totalSalarioHomens = 0;
+var totalSalarioMulheres = 0;
+var contHomens = 0;
+var contMulheres = 0;
+var resultado = "CÓDIGO | SALÁRIO BRUTO | SALÁRIO LÍQUIDO\n";
+
+while (true) {
+    var codigo = parseInt(prompt("Insira o código do professor (99999 para sair):"));
+    if (codigo === 99999) break;
+
+    var sexo = prompt("Insira o sexo do professor (M - Masculino, F - Feminino):").toUpperCase();
+    var horasAula = parseFloat(prompt("Insira o número de horas/aula dadas mensalmente:"));
+
+    var salarioBruto = horasAula * 30;
+    var desconto = sexo === "M" ? 0.10 : 0.05;
+    var salarioLiquido = salarioBruto * (1 - desconto);
+
+    if (sexo === "M") {
+        totalSalarioHomens += salarioLiquido;
+        countHomens++;
+    } else if (sexo === "F") {
+        totalSalarioMulheres += salarioLiquido;
+        countMulheres++;
+    }
+
+    resultado += codigo + " | R$ " + salarioBruto.toFixed(2) + " | R$ " + salarioLiquido.toFixed(2) + "\n";
+}
+
+var mediaHomens = contHomens > 0 ? (totalSalarioHomens / countHomens).toFixed(2) : 0;
+var mediaMulheres = countMulheres > 0 ? (totalSalarioMulheres / contMulheres).toFixed(2) : 0;
+
+resultado += "\nMédia do salário líquido dos homens: R$ " + mediaHomens;
+resultado += "\nMédia do salário líquido das mulheres: R$ " + mediaMulheres;
+
+alert(resultado);
+</script>
+</body>
+</body>
+</html>

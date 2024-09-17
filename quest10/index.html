@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var somaIdade = 0
+        var contador = 0
+        var mediaIdade = 0
+        
+        while(true){ 
+            var idade = Number(prompt('Digite uma idade(para parar o progama,digite 0)'))
+            if(idade == 0){
+                break;
+            }
+            if(idade>=18){
+            somaIdade += idade
+            contador++
+            }
+        }
+        mediaIdade = (somaIdade / contador)
+        alert('A soma da idade dos maiores de 18 anos é: '+somaIdade+'\nE a média de idade deles é: '+mediaIdade.toFixed(2))
+        </script>
+</body>
+</html>

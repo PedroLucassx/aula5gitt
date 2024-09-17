@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var contador = 0
+        var somaSalarios = 0
+        var somaFilhos = 0
+        var MaiorSalario = -Infinity
+        var mediaSalario = 0
+        var mediaFilhos = 0
+        var Salario100 = 0
+        var percent100 = 0
+        var percentSalario100 = 0
+    
+        while(true){
+        var salario = Number(prompt('qual o seu salario?'))
+        if(salario < 0){
+            break;
+        }
+        
+        var filho = Number(prompt('quantos filhos voce tem?'))
+        somaSalarios += salario
+        somaFilhos += filho
+        if(MaiorSalario < salario){
+        MaiorSalario = salario
+        }
+        if(salario <= 100){
+        Salario100++
+        percent100 =Salario100*100
+        }
+        contador++
+        }
+        mediaSalario = somaSalarios / contador
+        mediaFilhos = somaFilhos / contador
+        percentSalario100 = percent100 / contador
+    
+        alert(`MEDIA DE SALARIO: ${mediaSalario.toFixed(2)}\nMEDIA DE FILHOS: ${mediaFilhos.toFixed(2)}\nMAIOR SALARIO: ${MaiorSalario}\nPERCENTUAL DE PESSOAS COM SALARIO ATÉ 100 REAIS: ${percentSalario100.toFixed(2)}`)
+        </script>
+</body>
+</html>

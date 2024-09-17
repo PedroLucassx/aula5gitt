@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var canditado1 = 0
+        var canditado2 = 0
+        var canditado3 = 0
+        var canditado4 = 0
+        var nulo = 0
+        var branco = 0
+    
+        while(true){
+        var id = Number(prompt('DIGITE O CODIGO DE VOTO(PARA PARAR, DIGITE 0)'))
+        if(id == 0){
+            break;
+        }
+        switch(id){
+            case 1:
+        canditado1++
+        break;
+            case 2:
+        canditado2++
+        break;
+            case 3:
+        canditado3++
+        break;
+            case 4:
+        canditado4++
+        break;
+            case 5:
+        nulo++
+        break;
+            case 6:
+        branco++
+        break;
+        default:
+        alert('codigo nao identificado, digite um valido')
+        break;
+        }
+        }
+    
+    alert(`TOTAL DE VOTOS DO CANDIDATO 1: ${canditado1}\nTOTAL DE VOTOS DO CANDIDATO 2: ${canditado2}\nTOTAL DE VOTOS DO CANDIDATO 3: ${canditado3}\nTOTAL DE VOTOS DO CANDIDATO 4: ${canditado4}\nTOTAL DE VOTOS NULOS: ${nulo}\nTOTAL DE VOTOS EM BRANCO: ${branco}\n`)
+        </script>
+</body>
+</html>

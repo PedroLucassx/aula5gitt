@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var valorDivida = parseFloat(prompt("Insira o valor da dívida:"));
+
+var parcelas = [1, 3, 6, 9, 12];
+var juros = [0, 10, 15, 20, 25];
+
+var resultado = "VALOR DA DÍVIDA | VALOR DOS JUROS | QUANTIDADE DE PARCELAS | VALOR DA PARCELA\n";
+
+for (var i = 0; i < parcelas.length; i++) {
+    var valorJuros = (juros[i] / 100) * valorDivida;
+    var valorTotal = valorDivida + valorJuros;
+    var valorParcela = valorTotal / parcelas[i];
+    
+    resultado += "R$ " + valorTotal.toFixed(2) + " | " + valorJuros.toFixed(2) + " | " + parcelas[i] + " | R$ " + valorParcela.toFixed(2) + "\n";
+}
+
+alert(resultado);
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var qtd18 = 0
+        var mediaIdadeTime1 = ''
+        var somaIdadeTime1 = ''
+        var mediaIdadeTime2 = ''
+        var somaIdadeTime2 = ''
+        var mediaIdadeTime3 = ''
+        var somaIdadeTime3 = ''
+        var mediaIdadeTime4 = ''
+        var somaIdadeTime4 = ''
+        var mediaIdadeTime5 = ''
+        var somaIdadeTime5 = ''
+        var mediaAltura = ''
+        var somaAltura = 0
+        var cont80 = 0
+        var percent80 = 0
+        var percent80Final = ''
+        
+        for(let i = 0; i < 55; i++){
+        var idade = Number(prompt('Qual a idade do jogador?'))
+        if(idade < 18){
+        qtd18++
+        }
+        var peso = Number(prompt('Qual o peso do jogador?'))
+        var altura = Number(prompt('Qual a altura do jogador?'))
+        somaAltura += altura
+        if(peso > 80){
+        cont80++
+        percent80 = cont80 * 100
+        }
+        while(i < 11){
+        somaIdadeTime1 += idade
+        }
+        while(i >= 11 && i <22){
+        somaIdadeTime2 += idade
+        }
+        while(i >= 22 && i < 33){
+        somaIdadeTime3 += idade
+        }
+        while(i >= 33 && i < 44){
+        somaIdadeTime4 += idade
+        }
+        while(i >= 44 && i < 55){
+        somaIdadeTime5 += idade
+        }
+        }
+        mediaIdadeTime1 = somaIdadeTime1/11
+        mediaIdadeTime2 = somaIdadeTime2/11
+        mediaIdadeTime3 = somaIdadeTime3/11
+        mediaIdadeTime4 = somaIdadeTime4/11
+        mediaIdadeTime5 = somaIdadeTime5/11
+        percent80Final = percent80 / 55
+        mediaAltura = somaAltura / 55
+        alert(`A QUANTIDADE DE JOGADORES MENORES DE 18 ANOS É: ${qtd18}\nMEDIA DE IDADE DO TIME 1: ${mediaIdadeTime1}\nMEDIA DE IDADE DO TIME 2: ${mediaIdadeTime2}\nMEDIA DE IDADE DO TIME 3: ${mediaIdadeTime3}\nMEDIA DE IDADE DO TIME 4: ${mediaIdadeTime4}\nMEDIA DE IDADE DO TIME 5: ${mediaIdadeTime5}\nMEDIA DE ALTURA: ${mediaAltura}\nPERCENTUAL DE JOGADORES COM MAIS DE 80KG: ${percent80Final}`)
+        </script>
+</body>
+</html>

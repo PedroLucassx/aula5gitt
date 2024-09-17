@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var contador = 0
+        var contadorPar = 0 
+        var contadorImpar = 0
+        var porcentPar = 0
+        var mediaNum = 0
+        while(true){
+        var num = Number(prompt("Digite um número (para parar o programa digite 0"));
+            if(num == 0){
+            break;
+            }
+        if(num%2 == 0){
+            contadorPar++
+            porcentPar = contadorPar*100
+        }
+        if(num%2 == 1){
+            contadorImpar++
+        }
+        contador++
+        mediaNum += num / contador
+    }
+       var mediaPar = porcentPar/contador
+       alert(`A quantidade de numeros pares lidos foi: ${contadorPar}\nA quantidade de numeros impares foi: ${contadorImpar}\nA média de valores pares lidos foi: ${mediaPar.toFixed(2)}\nE a media dos numerosw lidos foi: ${mediaNum.toFixed(2)}`)
+        </script>
+        -->
+    
+        <!--questao14
+        <script>
+        var resultado = ''
+        for(i = 100; i <= 200; i++){
+        if(i%2 == 0){
+        resultado += i+' '
+        }
+        }
+        alert(resultado)
+        </script>
+</body>
+</html>

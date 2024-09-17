@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var contador = 0
+        var somaSalario = 0
+        var maiorIdade = -Infinity
+        var menorIdade = Infinity
+        var mediaSalario = ''
+        var qtd100 = 0
+    
+        while(true){
+        var idade = Number(prompt('qual sua idade?(quando quiser parar o programa, digite uma idade negativa)'))
+        if(idade < 0){
+            break;
+        }
+        var sexo = prompt('qual seu sexo?(DIGITE (m) PARA MASCULINO\nDIGITE (f) PARA FEMININO\nDIGITE (o) PARA OUTROS)')
+        var salario = Number(prompt('Digite seu salario'))
+        somaSalario += salario
+        if(maiorIdade < idade){
+        maiorIdade = idade
+        }
+        if(menorIdade > idade){
+        menorIdade = idade
+        }
+        if(salario <= 100 && sexo === 'f'){
+        qtd100++
+        }
+        contador++
+        }
+        mediaSalario = somaSalario / contador
+    
+        alert(`MEDIA DE SALARIO: ${mediaSalario.toFixed(2)}\nMAIOR IDADE: ${maiorIdade}\nMENOR IDADE: ${menorIdade}\nQUANTIDADE DE MULHERES COM SALARIO ATÉ 100 REAIS: ${qtd100}`)
+        </script>
+</body>
+</html>

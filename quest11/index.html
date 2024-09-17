@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var porcent1 = 0
+        var porcent2 = 0
+        var porcent3 = 0
+        var porcent4 = 0
+        var porcent5 = 0
+        var contador = 0
+        var contador1 = 0
+        var contador2 = 0
+        var contador3 = 0
+        var contador4 = 0
+        var contador5 = 0
+    
+        while(true){ 
+            var idade = Number(prompt('Digite uma idade(para parar o progama,digite 0)'))
+            if(idade == 0){
+                break;
+            }
+            contador++
+            if(idade > 0 && idade <= 17){
+            contador1++
+            porcent1 += contador1 *100
+            }
+    
+            else if(idade >= 18 && idade <= 35 ){
+            contador2++
+            porcent2 += contador2 *100
+            }
+    
+            else if(idade >= 36 && idade <= 50){
+            contador3++
+            porcent3 += contador3 *100
+            }
+    
+            else if(idade >= 51 && idade <= 65){
+            contador4++
+            porcent4 += contador4 *100
+            }
+            else{
+            contador5++
+            porcent5 += contador5 *100
+            }
+        }
+        alert('a porcetagem de pessoas entre 1 e 17 anos é: '+(porcent1/contador).toFixed(2)+'\na porcetagem de pessoas entre 18 e 35 anos é: '+(porcent2/contador).toFixed(2)+'\na porcetagem de pessoas entre 36 e 50 anos é: '+(porcent3/contador).toFixed(2)+'\na porcetagem de pessoas entre 51 e 65 anos é: '+(porcent4/contador).toFixed(2)+'\na porcetagem de pessoas acima de 65 anos é: '+(porcent5/contador).toFixed(2))
+        </script>
+</body>
+</html>

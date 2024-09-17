@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var n = Number(prompt("Quantos valores deseja inserir?"));
+for (var i = 0; i < n; i++) {
+    var valor = Number(prompt("Insira um valor:"));
+    var fatorial = 1;
+    for (var j = valor; j > 1; j--) {
+        fatorial *= j;
+    }
+    alert("Valor: " + valor + " - Fatorial: " + fatorial);
+}
+</script>
+</body>
+</html>
